@@ -1,0 +1,29 @@
+header, nav, .contenedor, footer{
+    max-width:  92%;
+    margin: auto;
+}
+nav{
+    background-color:cyan;
+    color: white;
+}
+header{
+    
+    
+    
+
+} 
+.contenedor{
+
+}
+.central{
+    display: inline-block;
+    max-width: 32%;
+
+}
+footer{
+
+}
+aside{
+    display: inline-block;
+    max-width: 32%
+}
