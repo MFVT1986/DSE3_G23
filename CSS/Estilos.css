@@ -1,29 +1,47 @@
-header, nav, .contenedor, footer{
-    max-width:  92%;
+header, nav, .contenedor, footer, {
+    max-width: 92%;
     margin: auto;
 }
-nav{
-    background-color:cyan;
-    color: white;
+.izq
+{
+    display: inline-block;
+    max-width: 45%;
+    
 }
-header{
+.der
+{
+    display: inline-block;
+    max-width: 45%;
+    position: absolute;
+    left: 55%;
     
     
+    margin-top: auto;
+    background-color: white;
+    color: darkblue;
+}
+.nave{
     
 
-} 
-.contenedor{
-
+    background-color: #cccccc;
+    color: black;
 }
 .central{
+    
     display: inline-block;
-    max-width: 32%;
-
+    width: 45%;
+    background-color: burlywood;
+    
+    
+}
+.centro{
+    
+    display: inline-block;
+    width: 45%;
+    background-color: chartreuse;
+    
+}
 }
 footer{
-
-}
-aside{
-    display: inline-block;
-    max-width: 32%
+    background-color: coral;
 }
