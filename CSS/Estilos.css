@@ -1,6 +1,6 @@
-header, nav, .contenedor, footer, {
+header, nav, footer, {
     max-width: 92%;
-    margin: auto;
+    margin: 0 auto;
 }
 .izq
 {
@@ -23,7 +23,7 @@ header, nav, .contenedor, footer, {
 .nave{
     
 
-    background-color: #cccccc;
+    background-color: #FACC2E;
     color: black;
 }
 .central{
@@ -44,4 +44,10 @@ header, nav, .contenedor, footer, {
 }
 footer{
     background-color: coral;
+}
+
+}
+div.contenedor {
+	width: 300px; 
+	margin: 0 auto; 
 }
