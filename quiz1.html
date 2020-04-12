@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Estilos.css">
+</head>
+
+<body style="background-color:#EFF8FB;">
+
+   <header>
+        <section class="izq">
+            <img src="IMG/Encabezado.jpg" alt="Logo de la UNAD">           
+   </header> 
+
+   <nav class="nave">
+        <div style="text-align: center;">
+        <br>
+	    <a href="index.html"><img src="IMG/inicio.png"></a>
+	    <a href="lecturas.html"><img src="IMG/lecturas.png"></a>
+	    <a href="actividades.html"><img src="IMG/actividades.png"></a>
+	    <a href="multimedia.html"><img src="IMG/multimedia.png"></a>
+	    <a href="autores.html"><img src="IMG/autores.png"></a>
+   	    <br>
+   </nav>
+        
+                <script language="JavaScript">
+
+                    var alfab = "abcdefghijklmnñopqrstuvxyz"
+                            var nump = 4
+                            var nrp = 3
+                            function corrixe() {
+                                var acertos = 0
+                                var sol = ""
+                                fiestrar = open("", "novar", "width=300,height=350,scrollbars")
+                                fiestrar.document.write("<table border='0' width='100%' cellspacing='0' cellpadding='4' bgcolor='#FFFFF2'><tr><td><p align='center'>")
+                                for (i = 1; i <= nump; i++) {
+                                    var senresp = true
+                                    for (j = 1; j <= nrp; j++) {
+                                        if (eval("document.test.resp" + i + "[" + (j - 1) + "].checked") == true) {
+                                            sol += alfab.substring(j - 1, j); senresp = false; break
+                                        }
+                                    }
+                                    if (senresp == true) { sol += "-" }
+                                }
+                                var tempo = new Date()
+                                fiestrar.document.write("<br>Hora: " + tempo.getHours() + ":" + tempo.getMinutes())
+                                fiestrar.document.write("<br>Fecha: " + tempo.getDate() + "/" + eval(tempo.getMonth() + 1) + "/" + tempo.getYear())
+                                fiestrar.document.write("<p align='center'><table>")
+                                fiestrar.document.write("<tr><td colspan='4' align='center'><font size='5'>Resultados del test</font><p></td></tr>")
+                                fiestrar.document.write("<tr><td width='33' bgcolor='#FFF4F4'>" +
+                                    "<p align='center'>Preg</td><td width='35' bgcolor='#FFF4F4' align='center'>" +
+                                    "Solu</td><td width='35' bgcolor='#FFF4F4' align='center'>Resp</td>" +
+                                    "<td width='35' bgcolor='#FFF4F4'><p align='center'>Resul</td></tr>")
+                                for (i = 1; i <= sol.length; i++) {
+                                    resposta = document.test.tras.value.substring(i - 1, i)
+                                    solucion = sol.substring(i - 1, i)
+                                    if (resposta == solucion) {
+                                        acertos += 1
+                                        fiestrar.document.write("<tr><td align='center'>" + i +
+                                            "</td><td align='center'>" + resposta + "</td><td align='center'>" + solucion +
+                                            "</td><td align='center'><font color='#009933'>acierto</font></td></tr>")
+                                    }
+                                    else {
+                                        fiestrar.document.write("<tr><td align='center'>" + i + "</td><td align='center'>" + resposta +
+                                            "</td><td align='center'>" + solucion + "</td><td align='center'><font color='#FF0000'>fallo</font></td></tr>")
+                                    }
+                                }
+                                nota = 10 / nump * acertos;
+                                if (Math.floor(nota) != Math.ceil(nota)) {
+                                    cadea = "" + nota; for (var i = 0; i <= cadea.length; i++) {
+                                        if (cadea.charAt(i) == ".") { nota = cadea.substring(0, i + 3); break; }
+                                    }
+                                }
+                                fiestrar.document.write("<tr><td colspan='4' align='center'>Aciertos: " + acertos + " de " + nump + "</td></tr>")
+                                fiestrar.document.write("<tr><td colspan='4' align='center'>Nota: " + nota + "</td></tr>")
+                                fiestrar.document.write("</td></tr><tr><td colspan='4' align='center'><p><form><input type='button' value='Cerrar' name='pecharf' onClick='window.close()' style='background-color: #FFCC66'></form></td></tr></table></td></tr></table>")
+                                fiestrar.document.write("</table>")
+                                fiestrar.document.close()
+                            }
+                    
+                        </script>
+                    </head>
+                    
+                    <body>
+                        <form name="test">
+                            <table width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td align="center">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <p align="center">Quiz Diseño de sitios web <br> 
+                                                                A continuación encontrara 5 preguntas, escoja la opcion correcta.</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <font size="4" color="#FF00FF">1. </font>
+                                                        </td>
+                                                        <td bgcolor="#008000" width="100%">¿Que es CSS?</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>a) </td>
+                                                        <td><input type="radio" name="resp1"></td>
+                                                        <td>CSS es un lenguaje usado para definir la presentación de un documento
+                                                            estructurado escrito en HTML o XML</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>b) </td>
+                                                        <td><input type="radio" name="resp1"></td>
+                                                        <td>Sirve para definir el body de un archivo HTML</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>c) </td>
+                                                        <td><input type="radio" name="resp1"></td>
+                                                        <td>Sirve para crear el header de un archivo HTML</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <font size="4" color="#FF00FF">2. </font>
+                                                        </td>
+                                                        <td bgcolor="#008000" width="100%">¿Que extension tiene los archivo HTML?</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>a) </td>
+                                                        <td><input type="radio" name="resp2"></td>
+                                                        <td>.txt</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>b) </td>
+                                                        <td><input type="radio" name="resp2"></td>
+                                                        <td>css</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>c) </td>
+                                                        <td><input type="radio" name="resp2"></td>
+                                                        <td>html</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <font size="4" color="#FF00FF">3. </font>
+                                                        </td>
+                                                        <td bgcolor="#008000" width="100%">Para que sirve la etiqueta br en html?</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>a) </td>
+                                                        <td><input type="radio" name="resp3"></td>
+                                                        <td>Para poner crear un parrafo</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>b) </td>
+                                                        <td><input type="radio" name="resp3"></td>
+                                                        <td>Produce un salto de linea en el texto</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>c) </td>
+                                                        <td><input type="radio" name="resp3"></td>
+                                                        <td>Para cambiar de pagina</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <font size="4" color="#FF00FF">4. </font>
+                                                        </td>
+                                                        <td bgcolor="#008000" width="100%">¿Para que sirve la opción Display en CSS?</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>a) </td>
+                                                        <td><input type="radio" name="resp4"></td>
+                                                        <td>Para especificar el color en un elemento</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>b) </td>
+                                                        <td><input type="radio" name="resp4"></td>
+                                                        <td>Para definir los bordes de un boton</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="25">&nbsp;</td>
+                                                        <td>c) </td>
+                                                        <td><input type="radio" name="resp4"></td>
+                                                        <td>Especifica el tipo de cuadro de representación utilizado para un elemento</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" height="50"><input type="hidden" value="acbc" name="tras">
+                                            <input type="button" value="Calificar" name="resultados" onclick="corrixe()"
+                                                style="background-color: #FFCC66">
+                                            <input type="reset" value="Limpiar" name="limpar" style="background-color: #FFCC66"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+       
+          
+   <footer>
+        <div id="sfc44y7smg6gamfzxjdt2kbry46u95tsbn6"></div><script type="text/javascript"
+        src="https://counter10.stat.ovh/private/counter.js?c=44y7smg6gamfzxjdt2kbry46u95tsbn6&down=async"
+        async></script><noscript><a href="https://www.contadorvisitasgratis.com"
+	    title="contador de visitas para blog"><img 
+	    src="https://counter10.stat.ovh/private/contadorvisitasgratis.php?c=44y7smg6gamfzxjdt2kbry46u95tsbn6"
+	    border="0" title="contador de visitas para blog" alt="contador de visitas para blog"></a></noscript>
+	    <br><br>
+	
+	    <section>
+	        <h6>Developed By grupo 23 - Curso Diseño de Sitios Web - abril 2020</h6>
+	        <h6>© 2020 Todos los derechos reservados</h6>
+	        <br><br><br>
+	    </section>		
+   </footer>
+
+
+</body>
+</html>
