@@ -65,3 +65,20 @@ header, nav, footer, {
     left: 75%;
     position: absolute;
 }
+
+.button{
+    background: #333333;
+    color: white;
+    font-size: 16px;
+	margin: auto;
+	text-align: center;
+    text-decoration:none;
+    padding: 12px 28px;
+    border-radius: 4px;
+    transition-duration: 0.5s;
+}
+
+.button:hover{
+    background-color: #333333;
+    color: white;
+}
