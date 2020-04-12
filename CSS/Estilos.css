@@ -1,6 +1,7 @@
 header, nav, footer, {
     max-width: 92%;
     margin: 0 auto;
+
 }
 .izq
 {
@@ -20,36 +21,45 @@ header, nav, footer, {
     background-color: white;
     color: darkblue;
 }
-.nave{
+.nave{    
     
-
     background-color: #FFBF00;
     color: black;
+	text-align: center;
+    
 }
 .central{
     
     display: inline-block;
     width: 45%;
     background-color: burlywood;
-    
-    
 }
+
+
 .centro{
     
     display: inline-block;
     width: 45%;
     background-color: chartreuse;
-    
 }
+
+.cuerpo{
+	
+    	background-color:#EFF8FB;
+	text-align: center;
 }
-footer{
+
+.footer{
+
     background-color: coral;
 }
 
 }
-div.contenedor {
+.contenedor {
+
 	width: 300px; 
-	margin: 0 auto; 
+	margin: 0 auto;
+     
 }
 
 .widget{
