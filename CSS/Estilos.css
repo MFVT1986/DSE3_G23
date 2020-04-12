@@ -3,14 +3,12 @@ header, nav, footer, {
     margin: 0 auto;
 
 }
-.izq
-{
+.izq{
     display: inline-block;
-    max-width: 45%;
-    
+    max-width: 45%;   
 }
-.der
-{
+
+.der{
     display: inline-block;
     max-width: 45%;
     position: absolute;
