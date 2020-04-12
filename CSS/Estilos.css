@@ -43,21 +43,14 @@ header, nav, footer, {
 
 .cuerpo{
 	
-    	background-color:#EFF8FB;
+    background-color:#EFF8FB;
 	text-align: center;
 }
 
-.footer{
+footer{
 
-    background-color: coral;
-}
-
-}
-.contenedor {
-
-	width: 300px; 
-	margin: 0 auto;
-     
+    background-color:#434343;
+	text-align: center;
 }
 
 .widget{
@@ -82,3 +75,28 @@ header, nav, footer, {
     background-color: #333333;
     color: white;
 }
+.menu{
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul,ol{  
+    list-style: none;
+}
+.lista li a{
+    background-color: #FFBF00;
+    /*background-color: black;*/
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 10px;
+    display: block;
+}
+.lista  li ul {
+    display:none;
+}
+.lista > li{
+    float: center;
+}
+.lista li a:hover{
+    background-color: #434343;
+}
+.lista li:hover> ul {
+    display: block;
